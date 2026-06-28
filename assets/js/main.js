@@ -1,20 +1,25 @@
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const state={lang:localStorage.getItem('djLang')||'en',artist:null,translations:{}};
-async function json(path){const r=await fetch(path);if(!r.ok)throw new Error(path);return r.json()}
-function tr(key){return state.translations[state.lang]?.[key]||state.translations.en?.[key]||key}
-function wa(message){const n=state.artist?.contact?.whatsappNumber||'351919344194';return `https://wa.me/${n}?text=${encodeURIComponent(message)}`}
-function setLang(lang){state.lang=lang;localStorage.setItem('djLang',lang);document.documentElement.lang=lang;$$('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));$$('[data-i18n]').forEach(el=>{el.innerHTML=tr(el.dataset.i18n)})}
-function openModal(){const modal=$('#booking-modal');if(!modal)return;modal.hidden=false;document.body.classList.add('modal-open');setTimeout(()=>modal.querySelector('input,select,textarea,button')?.focus(),30)}
+const ARTIST={name:'Jheff X Dj',whatsapp:'351919344194',instagram:'https://instagram.com/jheffbrasil'};
+const copy={
+  en:{'hero.eyebrow':'DJ booking · Europe','hero.subtitle':'Book a Brazilian Funk, Afro & Latin DJ set for clubs, private parties and events across Europe.','cta.book':'Check Availability','cta.instagram':'Instagram','cta.press':'Press Kit','trust.line':'Club nights · Private events · Festivals · Europe bookings','modal.kicker':'Quick booking request','modal.title':'Check availability','modal.body':'Send the key details first. WhatsApp will open with a clean booking request.','modal.eventType':'Event type','modal.guests':'Approx. guests','modal.send':'Send request on WhatsApp','form.city':'City','form.date':'Event date','form.message':'Message'},
+  fr:{'hero.eyebrow':'Booking DJ · Europe','hero.subtitle':'Réservez un set Brazilian Funk, Afro & Latin pour clubs, soirées privées et événements en Europe.','cta.book':'Vérifier disponibilité','cta.instagram':'Instagram','cta.press':'Press Kit','trust.line':'Soirées club · Événements privés · Festivals · Bookings Europe','modal.kicker':'Demande rapide','modal.title':'Vérifier disponibilité','modal.body':'Ajoutez les informations clés. WhatsApp s’ouvrira avec une demande de booking propre.','modal.eventType':'Type d’événement','modal.guests':'Invités approx.','modal.send':'Envoyer sur WhatsApp','form.city':'Ville','form.date':'Date de l’événement','form.message':'Message'},
+  pt:{'hero.eyebrow':'Booking DJ · Europa','hero.subtitle':'Reserve um set Brazilian Funk, Afro & Latin para clubs, festas privadas e eventos na Europa.','cta.book':'Ver disponibilidade','cta.instagram':'Instagram','cta.press':'Press Kit','trust.line':'Noites em clubs · Eventos privados · Festivais · Bookings Europa','modal.kicker':'Pedido rápido','modal.title':'Ver disponibilidade','modal.body':'Preencha as informações principais. O WhatsApp abrirá com uma mensagem de booking pronta.','modal.eventType':'Tipo de evento','modal.guests':'Convidados aprox.','modal.send':'Enviar pelo WhatsApp','form.city':'Cidade','form.date':'Data do evento','form.message':'Mensagem'}
+};
+let lang=localStorage.getItem('djLang')||'en';
+function wa(message){return `https://wa.me/${ARTIST.whatsapp}?text=${encodeURIComponent(message)}`}
+function t(key){return copy[lang]?.[key]||copy.en[key]||key}
+function setLang(next){lang=next;localStorage.setItem('djLang',lang);document.documentElement.lang=lang;$$('[data-lang]').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));$$('[data-i18n]').forEach(el=>{el.textContent=t(el.dataset.i18n)})}
+function openModal(){const modal=$('#booking-modal');if(!modal)return;modal.hidden=false;document.body.classList.add('modal-open');setTimeout(()=>modal.querySelector('select,input,textarea,button')?.focus(),30)}
 function closeModal(){const modal=$('#booking-modal');if(!modal)return;modal.hidden=true;document.body.classList.remove('modal-open')}
-function hydrateArtist(artist){state.artist=artist;document.title=`${artist.artistName} — Booking`;$$('[data-artist-name]').forEach(el=>el.textContent=artist.artistName);$$('[data-artist-tagline]').forEach(el=>el.textContent=artist.tagline);$$('a[href="https://instagram.com/jheffbrasil"]').forEach(el=>{if(artist.contact?.instagram)el.href=artist.contact.instagram})}
-function bookingMessage(form){const data=new FormData(form);return [`Hello ${state.artist?.artistName||'Jheff X Dj'},`,`I would like to check your availability for an event.`,``,`Event type: ${data.get('eventType')||'-'}`,`City: ${data.get('city')||'-'}`,`Date: ${data.get('date')||'-'}`,`Approx. guests: ${data.get('guests')||'-'}`,`Message: ${data.get('message')||'-'}`].join('\n')}
+function bookingMessage(form){const d=new FormData(form);return [`Hello ${ARTIST.name},`,`I would like to check your availability for an event.`,``,`Event type: ${d.get('eventType')||'-'}`,`City: ${d.get('city')||'-'}`,`Date: ${d.get('date')||'-'}`,`Approx. guests: ${d.get('guests')||'-'}`,`Message: ${d.get('message')||'-'}`].join('\n')}
 function setup(){
   $$('[data-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
   $$('[data-modal-open]').forEach(el=>el.addEventListener('click',openModal));
   $$('[data-modal-close]').forEach(el=>el.addEventListener('click',closeModal));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-  const quick=$('[data-js=quick-booking-form]');
-  if(quick){quick.addEventListener('submit',e=>{e.preventDefault();open(wa(bookingMessage(quick)),'_blank','noopener,noreferrer');closeModal()})}
+  $$('a[href="https://instagram.com/jheffbrasil"]').forEach(a=>a.href=ARTIST.instagram);
+  const form=$('[data-js=quick-booking-form]');
+  if(form){form.addEventListener('submit',e=>{e.preventDefault();open(wa(bookingMessage(form)),'_blank','noopener,noreferrer');closeModal()})}
+  setLang(lang);
 }
-async function init(){const [artist,translations]=await Promise.all([json('/data/artist.json'),json('/data/translations.json')]);state.translations=translations;hydrateArtist(artist);setup();setLang(state.lang)}
-init().catch(err=>{console.error(err);document.body.insertAdjacentHTML('afterbegin','<div style="padding:12px;background:#ff4338;color:#fff;text-align:center">Site data could not be loaded.</div>')});
+setup();
