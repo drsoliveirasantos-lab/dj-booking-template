@@ -19,6 +19,12 @@ Examples:
 5545999999999
 ```
 
+Current demo number:
+
+```txt
+351919344194
+```
+
 ## Cloudflare Pages settings
 
 ```txt
@@ -29,11 +35,24 @@ Build output directory: /
 
 ## Images
 
-The repository currently uses SVG demo visuals so the site can be deployed without binary uploads. For a real client, replace the SVG files in `assets/images/` with real optimized `.webp` or `.jpg` files and update the paths in the JSON/CSS if the names change.
+The active site uses optimized `.webp` images in:
 
-Recommended final image set:
+```txt
+assets/images/
+```
 
-- Hero image: 16:9, 1600px wide
+Active image set:
+
+- `hero.webp`
+- `live-performance.webp`
+- `crowd-show.webp`
+- `portrait-about.webp`
+- `lifestyle-europe.webp`
+- `press-closeup.webp`
+
+Recommended image sizes:
+
+- Hero image: 16:9, 1200–1600px wide
 - Live performance: 16:9
 - Crowd/show image: 16:9
 - Portrait/about: 4:5
