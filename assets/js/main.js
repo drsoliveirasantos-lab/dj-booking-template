@@ -1,5 +1,5 @@
 const $=(s,r=document)=>r.querySelector(s);const $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const ARTIST={name:'Jheff X Dj',whatsapp:'351919344194',instagram:'https://instagram.com/jheffbrasil'};
+const ARTIST={name:'Jheff X Dj',whatsapp:'351919344194',instagram:'https://www.instagram.com/jheffbrasil/'};
 const copy={
   en:{'hero.eyebrow':'DJ booking · Europe','hero.subtitle':'Brazilian Funk, Afro & Latin sets built to move clubs, private parties and events across Europe.','cta.book':'Check Availability','cta.instagram':'Instagram','cta.press':'Press Kit','trust.line':'Club nights · Private events · Festivals · Europe bookings','modal.kicker':'Quick booking request','modal.title':'Check availability','modal.body':'Send the key details first. WhatsApp will open with a clean booking request.','modal.eventType':'Event type','modal.guests':'Approx. guests','modal.send':'Send request on WhatsApp','modal.response':'Direct WhatsApp request — no phone field needed.','form.name':'Name','form.city':'City','form.date':'Event date','form.budget':'Approx. budget','form.message':'Message'},
   fr:{'hero.eyebrow':'Booking DJ · Europe','hero.subtitle':'Un set Brazilian Funk, Afro & Latin pensé pour faire bouger clubs, soirées privées et événements en Europe.','cta.book':'Vérifier disponibilité','cta.instagram':'Instagram','cta.press':'Press Kit','trust.line':'Soirées club · Événements privés · Festivals · Bookings Europe','modal.kicker':'Demande rapide','modal.title':'Vérifier disponibilité','modal.body':'Ajoutez les informations clés. WhatsApp s’ouvrira avec une demande de booking propre.','modal.eventType':'Type d’événement','modal.guests':'Invités approx.','modal.send':'Envoyer sur WhatsApp','modal.response':'Demande directe WhatsApp — pas besoin de champ téléphone.','form.name':'Nom','form.city':'Ville','form.date':'Date de l’événement','form.budget':'Budget approx.','form.message':'Message'},
@@ -17,7 +17,7 @@ function setup(){
   $$('[data-modal-open]').forEach(el=>el.addEventListener('click',openModal));
   $$('[data-modal-close]').forEach(el=>el.addEventListener('click',closeModal));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-  $$('a[href="https://instagram.com/jheffbrasil"]').forEach(a=>a.href=ARTIST.instagram);
+  $$('[data-instagram]').forEach(a=>{a.href=ARTIST.instagram;a.removeAttribute('target');a.removeAttribute('rel')});
   const form=$('[data-js=quick-booking-form]');
   if(form){form.addEventListener('submit',e=>{e.preventDefault();open(wa(bookingMessage(form)),'_blank','noopener,noreferrer');closeModal()})}
   setLang(lang);
