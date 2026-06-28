@@ -1,0 +1,12 @@
+{
+  "artistName": "Jheff Brasil DJ",
+  "tagline": "Brazilian Funk • Afro • Latin Vibes",
+  "location": "Shows in Europe",
+  "genres": ["Brazilian Funk", "Afro", "Latin", "Club Events", "Private Parties"],
+  "contact": {
+    "bookingEmail": "booking@example.com",
+    "whatsappNumber": "33000000000",
+    "instagram": "https://instagram.com/jheffbrasil",
+    "youtube": "https://youtube.com/@jheffxdj"
+  }
+}
