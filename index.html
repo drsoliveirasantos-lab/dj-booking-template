@@ -8,11 +8,12 @@
   <meta name="theme-color" content="#050505">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jheff X Dj — Brazilian Funk, Afro & Latin Vibes">
-  <meta property="og:description" content="Book Brazilian energy for clubs, private parties, festivals and Latin events across Europe.">
-  <meta property="og:image" content="/assets/images/hero.webp">
+  <meta property="og:description" content="Book Brazilian Funk, Afro & Latin DJ sets for clubs, private parties and events across Europe.">
+  <meta property="og:image" content="/assets/images/og-image.svg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=landing-compact-2">
+  <link rel="preload" as="image" href="/assets/images/live-performance.webp">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=landing-final-1">
 </head>
 <body class="landing-page">
   <header class="topbar">
@@ -25,7 +26,7 @@
       <p class="eyebrow" data-i18n="hero.eyebrow">DJ booking · Europe</p>
       <h1>Jheff X Dj</h1>
       <p class="tagline">Brazilian Funk • Afro • Latin Vibes</p>
-      <p class="lead" data-i18n="hero.subtitle">Book a Brazilian Funk, Afro & Latin DJ set for clubs, private parties and events across Europe.</p>
+      <p class="lead" data-i18n="hero.subtitle">Brazilian Funk, Afro & Latin sets built to move clubs, private parties and events across Europe.</p>
 
       <div class="actions">
         <button class="btn primary" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
@@ -47,16 +48,20 @@
       <h2 id="booking-title" data-i18n="modal.title">Check availability</h2>
       <p class="modal-lead" data-i18n="modal.body">Send the key details first. WhatsApp will open with a clean booking request.</p>
       <form class="quick-form" data-js="quick-booking-form">
+        <label><span data-i18n="form.name">Name</span><input name="name" autocomplete="name" required></label>
+        <label><span data-i18n="form.phone">Phone / WhatsApp</span><input name="phone" autocomplete="tel"></label>
         <label><span data-i18n="modal.eventType">Event type</span><select name="eventType"><option>Club night</option><option>Private party</option><option>Festival</option><option>Corporate / cultural event</option><option>Other</option></select></label>
         <label><span data-i18n="form.city">City</span><input name="city" autocomplete="address-level2" required></label>
         <label><span data-i18n="form.date">Event date</span><input name="date" type="date"></label>
         <label><span data-i18n="modal.guests">Approx. guests</span><input name="guests" inputmode="numeric" placeholder="Optional"></label>
+        <label class="full"><span data-i18n="form.budget">Approx. budget</span><input name="budget" placeholder="Optional"></label>
         <label class="full"><span data-i18n="form.message">Message</span><textarea name="message" rows="4" placeholder="Tell us about the event, audience and music vibe."></textarea></label>
         <button class="btn primary full" type="submit" data-i18n="modal.send">Send request on WhatsApp</button>
+        <p class="response-note full" data-i18n="modal.response">Direct booking request — response usually within 24h.</p>
       </form>
     </section>
   </div>
 
-  <script type="module" src="/assets/js/main.js?v=landing-compact-2"></script>
+  <script type="module" src="/assets/js/main.js?v=landing-final-1"></script>
 </body>
 </html>
