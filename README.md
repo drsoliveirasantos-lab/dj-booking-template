@@ -6,7 +6,7 @@ Site statique premium pour DJ / artiste événementiel, orienté booking, prêt 
 
 Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis remplacer seulement les données et les visuels pour un autre artiste.
 
-## Structure
+## Structure propre
 
 ```txt
 .
@@ -15,6 +15,12 @@ Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis rempla
 │   ├── css/styles.css
 │   ├── js/main.js
 │   └── images/
+│       ├── hero.webp
+│       ├── live-performance.webp
+│       ├── crowd-show.webp
+│       ├── portrait-about.webp
+│       ├── lifestyle-europe.webp
+│       └── press-closeup.webp
 ├── data/
 │   ├── artist.json
 │   ├── events.json
@@ -32,19 +38,15 @@ Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis rempla
 
 ## Déploiement Cloudflare Pages
 
-Paramètres recommandés :
-
 ```txt
 Framework preset: None
 Build command: laisser vide
 Build output directory: /
 ```
 
-Cloudflare Pages va servir directement `index.html`.
-
 ## Personnalisation rapide
 
-### 1. Modifier l'artiste
+### Artiste
 
 Fichier :
 
@@ -52,15 +54,15 @@ Fichier :
 data/artist.json
 ```
 
-À modifier en priorité :
+Champs principaux :
 
 ```json
 {
-  "artistName": "Jheff Brasil DJ",
+  "artistName": "Jheff X Dj",
   "tagline": "Brazilian Funk • Afro • Latin Vibes",
   "contact": {
     "bookingEmail": "booking@example.com",
-    "whatsappNumber": "33000000000",
+    "whatsappNumber": "351919344194",
     "instagram": "https://instagram.com/jheffbrasil",
     "youtube": "https://youtube.com/@jheffxdj"
   }
@@ -69,47 +71,40 @@ data/artist.json
 
 Le numéro WhatsApp doit être au format international, sans `+`, sans espaces.
 
-Exemples :
-
-```txt
-33600000000
-5545999999999
-```
-
-### 2. Modifier les événements
-
-Fichier :
+### Événements
 
 ```txt
 data/events.json
 ```
 
-### 3. Modifier les vidéos
-
-Fichier :
+### Vidéos
 
 ```txt
 data/videos.json
 ```
 
-### 4. Modifier les images
+### Galerie
 
-Les visuels actuels sont des **SVG de démo** pour que le site soit immédiatement déployable sans upload binaire.
+```txt
+data/gallery.json
+```
 
-Dossier :
+### Images
+
+Les images finales utilisées par le site sont dans :
 
 ```txt
 assets/images/
 ```
 
-Pour une version client finale, remplace-les par de vraies images optimisées en `.webp` ou `.jpg`, puis mets à jour les chemins dans les fichiers JSON et CSS si les noms changent.
+Format recommandé : `.webp` optimisé.
 
 ## Sections du site
 
 - Hero principal
 - About / Bio
-- Live videos
 - Upcoming shows
+- Media / videos
 - Gallery
 - Press kit
 - Booking form
