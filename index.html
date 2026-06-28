@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jheff X Dj — Brazilian Funk, Afro & Latin Vibes</title>
-  <meta name="description" content="Book Jheff X Dj for high-energy Brazilian Funk, Afro and Latin sets for clubs, private parties, festivals and events across Europe.">
+  <meta name="description" content="Book Jheff X Dj for Brazilian Funk, Afro and Latin DJ sets for clubs, private parties, festivals and events across Europe.">
   <meta name="theme-color" content="#050505">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Jheff X Dj — Brazilian Funk, Afro & Latin Vibes">
@@ -12,46 +12,28 @@
   <meta property="og:image" content="/assets/images/hero.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=landing-compact-2">
 </head>
 <body class="landing-page">
-  <header class="header compact-header">
-    <a class="brand" href="/"><span class="brand-dot">JX</span><span data-artist-name>Jheff X Dj</span></a>
-    <nav class="nav compact-nav" aria-label="Main navigation">
-      <a href="/press-kit/" data-i18n="cta.press">Press Kit</a>
-      <button class="nav-cta" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
-      <div class="langs"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="pt">PT</button></div>
-    </nav>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Jheff X Dj home">Jheff X Dj</a>
+    <div class="lang-switch" aria-label="Language selector"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="pt">PT</button></div>
   </header>
 
-  <main class="landing-main">
-    <section id="home" class="landing-hero">
-      <div class="container landing-grid">
-        <div class="landing-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">DJ booking · Europe</p>
-          <h1><span data-artist-name>Jheff X Dj</span></h1>
-          <p class="tagline" data-artist-tagline>Brazilian Funk • Afro • Latin Vibes</p>
-          <p class="lead" data-i18n="hero.subtitle">Book Brazilian energy for clubs, private parties, festivals and Latin events across Europe.</p>
-          <div class="actions">
-            <button class="btn primary" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
-            <a class="btn ghost" href="https://instagram.com/jheffbrasil" target="_blank" rel="noopener" data-i18n="cta.instagram">Instagram</a>
-            <a class="btn ghost" href="/press-kit/" data-i18n="cta.press">Press Kit</a>
-          </div>
-          <div class="trust-bar" aria-label="Booking highlights">
-            <span data-i18n="trust.clubs">Club nights</span>
-            <span data-i18n="trust.private">Private events</span>
-            <span data-i18n="trust.festivals">Festivals</span>
-            <span data-i18n="trust.europe">Europe bookings</span>
-          </div>
-        </div>
+  <main class="screen">
+    <section class="hero-panel" aria-label="Jheff X Dj booking landing">
+      <p class="eyebrow" data-i18n="hero.eyebrow">DJ booking · Europe</p>
+      <h1>Jheff X Dj</h1>
+      <p class="tagline">Brazilian Funk • Afro • Latin Vibes</p>
+      <p class="lead" data-i18n="hero.subtitle">Book a Brazilian Funk, Afro & Latin DJ set for clubs, private parties and events across Europe.</p>
 
-        <aside class="landing-card" aria-label="Artist booking profile">
-          <p data-i18n="hero.cardLabel">Booking profile</p>
-          <strong>Brazilian Funk<br>Afro<br>Latin Vibes</strong>
-          <div><span data-i18n="hero.market">Market</span><b>Europe</b></div>
-          <div><span data-i18n="hero.format">Format</span><b>Clubs · Events · Private</b></div>
-        </aside>
+      <div class="actions">
+        <button class="btn primary" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
+        <a class="btn ghost" href="https://instagram.com/jheffbrasil" target="_blank" rel="noopener" data-i18n="cta.instagram">Instagram</a>
+        <a class="btn ghost" href="/press-kit/" data-i18n="cta.press">Press Kit</a>
       </div>
+
+      <p class="micro-trust" data-i18n="trust.line">Club nights · Private events · Festivals · Europe bookings</p>
     </section>
   </main>
 
@@ -63,7 +45,7 @@
       <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
       <p class="kicker" data-i18n="modal.kicker">Quick booking request</p>
       <h2 id="booking-title" data-i18n="modal.title">Check availability</h2>
-      <p class="lead" data-i18n="modal.body">Send the key details first. WhatsApp will open with a clean booking request.</p>
+      <p class="modal-lead" data-i18n="modal.body">Send the key details first. WhatsApp will open with a clean booking request.</p>
       <form class="quick-form" data-js="quick-booking-form">
         <label><span data-i18n="modal.eventType">Event type</span><select name="eventType"><option>Club night</option><option>Private party</option><option>Festival</option><option>Corporate / cultural event</option><option>Other</option></select></label>
         <label><span data-i18n="form.city">City</span><input name="city" autocomplete="address-level2" required></label>
@@ -75,6 +57,6 @@
     </section>
   </div>
 
-  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/main.js?v=landing-compact-2"></script>
 </body>
 </html>
