@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Instagram — Jheff X Dj</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=landing-final-4">
+</head>
+<body class="page">
+  <main class="page-main">
+    <section class="container" style="max-width:620px">
+      <div class="panel" style="text-align:center">
+        <p class="kicker">Instagram</p>
+        <h1 style="font-size:clamp(3rem,12vw,5.6rem);line-height:.9;letter-spacing:-.06em;margin:0 0 14px">Jheff X Dj</h1>
+        <p class="lead" style="margin:auto">Opening Instagram profile…</p>
+        <div class="link-list">
+          <a class="btn primary" id="open-app" href="instagram://user?username=jheffbrasil">Open in Instagram app</a>
+          <a class="btn ghost" href="https://www.instagram.com/jheffbrasil/">Open web profile</a>
+          <a class="btn ghost" href="/">Back to site</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const appUrl = 'instagram://user?username=jheffbrasil';
+    const webUrl = 'https://www.instagram.com/jheffbrasil/';
+    let fallbackTimer;
+    function openApp(){
+      document.location.href = appUrl;
+      fallbackTimer = setTimeout(() => {
+        if (!document.hidden) document.location.href = webUrl;
+      }, 1800);
+    }
+    document.getElementById('open-app').addEventListener('click', function(e){
+      e.preventDefault();
+      openApp();
+    });
+    window.addEventListener('pagehide', () => clearTimeout(fallbackTimer));
+    setTimeout(openApp, 350);
+  </script>
+</body>
+</html>
