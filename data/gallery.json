@@ -1,7 +1,7 @@
 [
-  {"title":"Hero / booking visual","image":"/assets/images/hero.svg"},
-  {"title":"Live performance","image":"/assets/images/live-performance.svg"},
-  {"title":"Crowd energy","image":"/assets/images/crowd-show.svg"},
-  {"title":"European lifestyle","image":"/assets/images/lifestyle-europe.svg"},
-  {"title":"Press portrait","image":"/assets/images/press-closeup.svg"}
+  {"title":"Hero / booking visual","image":"/assets/images/hero.webp"},
+  {"title":"Live performance","image":"/assets/images/live-performance.webp"},
+  {"title":"Crowd energy","image":"/assets/images/crowd-show.webp"},
+  {"title":"European lifestyle","image":"/assets/images/lifestyle-europe.webp"},
+  {"title":"Press portrait","image":"/assets/images/press-closeup.webp"}
 ]
