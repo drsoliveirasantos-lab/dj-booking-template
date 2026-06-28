@@ -19,7 +19,7 @@
     <a class="brand" href="/"><span class="brand-dot">JX</span><span data-artist-name>Jheff X Dj</span></a>
     <nav class="nav compact-nav" aria-label="Main navigation">
       <a href="/press-kit/" data-i18n="cta.press">Press Kit</a>
-      <a href="#" data-js="whatsapp" data-i18n="cta.book">Book via WhatsApp</a>
+      <button class="nav-cta" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
       <div class="langs"><button data-lang="en">EN</button><button data-lang="fr">FR</button><button data-lang="pt">PT</button></div>
     </nav>
   </header>
@@ -33,7 +33,7 @@
           <p class="tagline" data-artist-tagline>Brazilian Funk • Afro • Latin Vibes</p>
           <p class="lead" data-i18n="hero.subtitle">Book Brazilian energy for clubs, private parties, festivals and Latin events across Europe.</p>
           <div class="actions">
-            <a class="btn primary" href="#" data-js="whatsapp" data-i18n="cta.book">Book via WhatsApp</a>
+            <button class="btn primary" type="button" data-modal-open data-i18n="cta.book">Check Availability</button>
             <a class="btn ghost" href="https://instagram.com/jheffbrasil" target="_blank" rel="noopener" data-i18n="cta.instagram">Instagram</a>
             <a class="btn ghost" href="/press-kit/" data-i18n="cta.press">Press Kit</a>
           </div>
@@ -55,7 +55,26 @@
     </section>
   </main>
 
-  <a class="float" href="#" data-js="float-wa" aria-label="WhatsApp booking">✆</a>
+  <button class="float" type="button" data-modal-open aria-label="Booking availability">✆</button>
+
+  <div class="modal" id="booking-modal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+      <button class="modal-close" type="button" data-modal-close aria-label="Close">×</button>
+      <p class="kicker" data-i18n="modal.kicker">Quick booking request</p>
+      <h2 id="booking-title" data-i18n="modal.title">Check availability</h2>
+      <p class="lead" data-i18n="modal.body">Send the key details first. WhatsApp will open with a clean booking request.</p>
+      <form class="quick-form" data-js="quick-booking-form">
+        <label><span data-i18n="modal.eventType">Event type</span><select name="eventType"><option>Club night</option><option>Private party</option><option>Festival</option><option>Corporate / cultural event</option><option>Other</option></select></label>
+        <label><span data-i18n="form.city">City</span><input name="city" autocomplete="address-level2" required></label>
+        <label><span data-i18n="form.date">Event date</span><input name="date" type="date"></label>
+        <label><span data-i18n="modal.guests">Approx. guests</span><input name="guests" inputmode="numeric" placeholder="Optional"></label>
+        <label class="full"><span data-i18n="form.message">Message</span><textarea name="message" rows="4" placeholder="Tell us about the event, audience and music vibe."></textarea></label>
+        <button class="btn primary full" type="submit" data-i18n="modal.send">Send request on WhatsApp</button>
+      </form>
+    </section>
+  </div>
+
   <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>
