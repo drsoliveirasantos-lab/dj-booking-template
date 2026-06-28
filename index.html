@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jheff X Dj — Booking</title>
-  <meta name="description" content="Premium DJ booking website for Brazilian Funk, Afro and Latin events in Europe.">
+  <title>Jheff X Dj — Brazilian Funk, Afro & Latin Vibes</title>
+  <meta name="description" content="Book Jheff X Dj for high-energy Brazilian Funk, Afro and Latin sets for clubs, private parties, festivals and events across Europe.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jheff X Dj — Brazilian Funk, Afro & Latin Vibes">
+  <meta property="og:description" content="Book Brazilian energy for clubs, private parties, festivals and Latin events across Europe.">
+  <meta property="og:image" content="/assets/images/hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
@@ -12,7 +19,8 @@
     <a class="brand" href="#home"><span class="brand-dot">JX</span><span data-artist-name>Jheff X Dj</span></a>
     <button class="menu" type="button">Menu</button>
     <nav class="nav">
-      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#events" data-i18n="nav.events">Events</a>
+      <a href="#sound" data-i18n="nav.sound">Sound</a>
       <a href="#shows" data-i18n="nav.shows">Shows</a>
       <a href="#videos" data-i18n="nav.videos">Media</a>
       <a href="#booking" data-i18n="nav.booking">Booking</a>
@@ -24,22 +32,60 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Shows in Europe</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">DJ booking · Europe</p>
           <h1><span data-artist-name>Jheff X Dj</span></h1>
           <p class="tagline" data-artist-tagline>Brazilian Funk • Afro • Latin Vibes</p>
-          <p class="lead" data-i18n="hero.subtitle">Brazilian heat for European dancefloors.</p>
+          <p class="lead" data-i18n="hero.subtitle">Book Brazilian energy for clubs, private parties, festivals and Latin events across Europe.</p>
           <div class="actions">
-            <a class="btn primary" href="#booking" data-i18n="cta.book">Book a Show</a>
+            <a class="btn primary" href="#booking" data-i18n="cta.book">Book via WhatsApp</a>
             <a class="btn ghost" href="#videos" data-i18n="cta.watch">Watch Live</a>
+          </div>
+          <div class="trust-bar" aria-label="Booking highlights">
+            <span data-i18n="trust.clubs">Club nights</span>
+            <span data-i18n="trust.private">Private events</span>
+            <span data-i18n="trust.festivals">Festivals</span>
+            <span data-i18n="trust.europe">Europe bookings</span>
           </div>
         </div>
         <aside class="hero-card">
-          <div class="card-label">Booking profile</div>
+          <div class="card-label" data-i18n="hero.cardLabel">Booking profile</div>
           <div class="hero-card-title">Brazilian Funk<br>Afro<br>Latin Vibes</div>
-          <div class="hero-card-row"><span>Market</span><strong>Europe</strong></div>
-          <div class="hero-card-row"><span>Format</span><strong>Clubs · Events · Private</strong></div>
-          <a class="hero-card-link" href="/press-kit/">Open press kit →</a>
+          <div class="hero-card-row"><span data-i18n="hero.market">Market</span><strong>Europe</strong></div>
+          <div class="hero-card-row"><span data-i18n="hero.format">Format</span><strong>Clubs · Events · Private</strong></div>
+          <a class="hero-card-link" href="/press-kit/" data-i18n="hero.pressLink">Open press kit →</a>
         </aside>
+      </div>
+    </section>
+
+    <section id="events" class="section event-types-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker" data-i18n="events.kicker">For your event</p>
+          <h2 data-i18n="events.title">Built for dancefloors, private parties and high-energy rooms.</h2>
+          <p class="lead" data-i18n="events.subtitle">The site now explains clearly what the DJ can bring to different types of clients, so promoters can immediately understand the fit.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><span>01</span><h3 data-i18n="events.clubTitle">Clubs</h3><p data-i18n="events.clubBody">High-energy Brazilian, Afro and Latin club sets designed for movement and crowd connection.</p></article>
+          <article class="service-card"><span>02</span><h3 data-i18n="events.privateTitle">Private parties</h3><p data-i18n="events.privateBody">A dancefloor-oriented set for birthdays, weddings, private celebrations and VIP events.</p></article>
+          <article class="service-card"><span>03</span><h3 data-i18n="events.festivalTitle">Festivals</h3><p data-i18n="events.festivalBody">Brazilian and Latin atmosphere for larger crowds, outdoor events and cultural programs.</p></article>
+          <article class="service-card"><span>04</span><h3 data-i18n="events.corporateTitle">Corporate & cultural</h3><p data-i18n="events.corporateBody">Professional booking presentation for brands, cultural venues and international audiences.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sound" class="section sound-section">
+      <div class="container split">
+        <div>
+          <p class="kicker" data-i18n="sound.kicker">Sound & vibe</p>
+          <h2 data-i18n="sound.title">A set built for heat, rhythm and crowd reaction.</h2>
+          <p class="lead" data-i18n="sound.body">The positioning is clearer: not just a DJ profile, but a complete booking page for Brazilian Funk, Afro and Latin event energy.</p>
+          <div class="pills" data-js="genres"></div>
+        </div>
+        <div class="vibe-grid">
+          <div class="vibe-card"><span>Brazilian Funk</span><strong data-i18n="sound.funk">Percussive, direct and high-energy.</strong></div>
+          <div class="vibe-card"><span>Afro</span><strong data-i18n="sound.afro">Warm rhythm and movement.</strong></div>
+          <div class="vibe-card"><span>Latin Club</span><strong data-i18n="sound.latin">Accessible party energy for mixed crowds.</strong></div>
+        </div>
       </div>
     </section>
 
@@ -49,7 +95,6 @@
           <p class="kicker" data-i18n="about.kicker">Artist profile</p>
           <h2 data-i18n="about.title">A clean booking page for promoters, clubs and private events.</h2>
           <p class="lead" data-i18n="about.body">Jheff X Dj is positioned for Brazilian Funk, Afro and Latin events across Europe. This site centralizes the artist image, videos, event dates, press kit and booking contact in one professional place.</p>
-          <div class="pills" data-js="genres"></div>
         </div>
         <div class="profile-card">
           <div class="profile-top">
@@ -57,9 +102,9 @@
             <div><strong data-artist-name>Jheff X Dj</strong><p data-artist-tagline>Brazilian Funk • Afro • Latin Vibes</p></div>
           </div>
           <div class="profile-list">
-            <div><span>Sound</span><strong>Brazilian / Afro / Latin</strong></div>
-            <div><span>Events</span><strong>Club nights, private parties, festivals</strong></div>
-            <div><span>Contact</span><strong>Direct WhatsApp booking</strong></div>
+            <div><span data-i18n="profile.soundLabel">Sound</span><strong>Brazilian / Afro / Latin</strong></div>
+            <div><span data-i18n="profile.eventsLabel">Events</span><strong data-i18n="profile.eventsValue">Club nights, private parties, festivals</strong></div>
+            <div><span data-i18n="profile.contactLabel">Contact</span><strong data-i18n="profile.contactValue">Direct WhatsApp booking</strong></div>
           </div>
         </div>
       </div>
@@ -68,9 +113,9 @@
     <section id="shows" class="section">
       <div class="container">
         <div class="section-head">
-          <p class="kicker" data-i18n="shows.kicker">Upcoming shows</p>
+          <p class="kicker" data-i18n="shows.kicker">Availability & shows</p>
           <h2 data-i18n="shows.title">Dates, cities and event links.</h2>
-          <p class="lead" data-i18n="shows.subtitle">Replace the demo events in data/events.json when real dates are available.</p>
+          <p class="lead" data-i18n="shows.subtitle">Use this area for confirmed events, availability announcements or selected past dates once the artist sends real details.</p>
         </div>
         <div class="events" data-js="events"></div>
       </div>
@@ -80,8 +125,8 @@
       <div class="container">
         <div class="section-head">
           <p class="kicker" data-i18n="live.kicker">Media</p>
-          <h2 data-i18n="live.title">A minimal space for live clips and proof of atmosphere.</h2>
-          <p class="lead" data-i18n="live.subtitle">This section can receive real reels, YouTube sets and crowd clips when the artist sends the final media.</p>
+          <h2 data-i18n="live.title">Live clips and proof of atmosphere.</h2>
+          <p class="lead" data-i18n="live.subtitle">This section is ready for real Instagram reels, YouTube sets and crowd clips when the artist sends the final media.</p>
         </div>
         <div class="video-grid" data-js="videos"></div>
       </div>
