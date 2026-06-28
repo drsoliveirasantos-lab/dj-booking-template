@@ -1,10 +1,10 @@
 # DJ Booking Website Template
 
-Site statique premium pour DJ / artiste événementiel, orienté booking, pensé pour GitHub + Cloudflare Pages.
+Site statique premium pour DJ / artiste événementiel, orienté booking, prêt pour **GitHub + Cloudflare Pages**.
 
 ## Objectif
 
-Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis remplacer uniquement les données et les images pour un autre artiste.
+Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis remplacer seulement les données et les visuels pour un autre artiste.
 
 ## Structure
 
@@ -22,7 +22,7 @@ Ce site sert de démo personnalisable : tu peux le montrer à un DJ, puis rempla
 │   ├── videos.json
 │   └── translations.json
 ├── press-kit/
-│   └── press-kit.html
+│   └── index.html
 ├── docs/
 │   └── CUSTOMIZATION.md
 ├── _headers
@@ -44,8 +44,6 @@ Cloudflare Pages va servir directement `index.html`.
 
 ## Personnalisation rapide
 
-Les contenus principaux sont séparés du code.
-
 ### 1. Modifier l'artiste
 
 Fichier :
@@ -54,30 +52,27 @@ Fichier :
 data/artist.json
 ```
 
-À modifier :
+À modifier en priorité :
 
 ```json
 {
-  "name": "Jheff Brasil DJ",
+  "artistName": "Jheff Brasil DJ",
   "tagline": "Brazilian Funk • Afro • Latin Vibes",
-  "location": "Shows in Europe",
-  "slogan": "Bringing Brazilian heat to European dancefloors.",
-  "bookingEmail": "booking@example.com",
-  "whatsappNumber": "33000000000"
+  "contact": {
+    "bookingEmail": "booking@example.com",
+    "whatsappNumber": "33000000000",
+    "instagram": "https://instagram.com/jheffbrasil",
+    "youtube": "https://youtube.com/@jheffxdj"
+  }
 }
 ```
 
 Le numéro WhatsApp doit être au format international, sans `+`, sans espaces.
 
-Exemple France :
+Exemples :
 
 ```txt
 33600000000
-```
-
-Exemple Brésil :
-
-```txt
 5545999999999
 ```
 
@@ -89,21 +84,7 @@ Fichier :
 data/events.json
 ```
 
-### 3. Modifier les images
-
-Fichier :
-
-```txt
-data/gallery.json
-```
-
-Puis remplace les fichiers dans :
-
-```txt
-assets/images/
-```
-
-### 4. Modifier les vidéos
+### 3. Modifier les vidéos
 
 Fichier :
 
@@ -111,19 +92,17 @@ Fichier :
 data/videos.json
 ```
 
-### 5. Modifier les textes multilingues
+### 4. Modifier les images
 
-Fichier :
+Les visuels actuels sont des **SVG de démo** pour que le site soit immédiatement déployable sans upload binaire.
+
+Dossier :
 
 ```txt
-data/translations.json
+assets/images/
 ```
 
-Langues prévues :
-
-- EN
-- FR
-- PT
+Pour une version client finale, remplace-les par de vraies images optimisées en `.webp` ou `.jpg`, puis mets à jour les chemins dans les fichiers JSON et CSS si les noms changent.
 
 ## Sections du site
 
@@ -132,48 +111,21 @@ Langues prévues :
 - Live videos
 - Upcoming shows
 - Gallery
-- Social/music links
 - Press kit
 - Booking form
 - Floating WhatsApp button
 - Footer
 
-## Formulaire de booking
+## Formulaire booking
 
-Le formulaire ne dépend d'aucun backend.
-
-Quand l'utilisateur envoie la demande, le site ouvre WhatsApp avec un message prérempli contenant :
-
-- nom ;
-- email ;
-- téléphone ;
-- ville ;
-- date ;
-- type d'événement ;
-- budget ;
-- message.
-
-## À faire avant de montrer au client
-
-1. Remplacer `bookingEmail`.
-2. Remplacer `whatsappNumber`.
-3. Remplacer ou valider les images.
-4. Vérifier les liens Instagram / YouTube.
-5. Adapter les événements.
-6. Tester sur mobile.
+Le formulaire ouvre WhatsApp avec un message prérempli. Pas besoin de backend pour la démo.
 
 ## Usage commercial
 
 Tu peux vendre ce site comme :
 
 ```txt
-Artist Booking Website
-```
-
-ou :
-
-```txt
 DJ Booking Landing Page + Press Kit
 ```
 
-Le point fort : tu peux réutiliser le même site pour plusieurs DJs en modifiant seulement les fichiers `/data/` et `/assets/images/`.
+Le point fort : le site est réutilisable pour plusieurs DJs en modifiant surtout `/data/` et `/assets/images/`.
