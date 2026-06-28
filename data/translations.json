@@ -1,0 +1,44 @@
+{
+  "en": {
+    "nav.about":"About","nav.videos":"Videos","nav.shows":"Shows","nav.gallery":"Gallery","nav.booking":"Booking",
+    "hero.eyebrow":"Shows in Europe","hero.subtitle":"Brazilian heat for European dancefloors.",
+    "cta.book":"Book a Show","cta.watch":"Watch Live","cta.press":"Press Kit",
+    "stats.languages":"Languages","stats.market":"Booking market","stats.response":"Fast response",
+    "about.kicker":"Artist profile","about.title":"A professional booking page, not just a link in bio.","about.body":"Jheff Brasil is positioned for Brazilian Funk, Afro and Latin events across Europe. This site centralizes the artist image, videos, event dates, press kit and booking contact in one professional place.",
+    "live.kicker":"Live energy","live.title":"Show the crowd before they book.","live.subtitle":"For DJs, video and atmosphere convert better than long text. This section is designed for reels, YouTube sets and live clips.",
+    "shows.kicker":"Upcoming shows","shows.title":"Dates, cities and event links.","shows.subtitle":"Replace the demo events in data/events.json when real dates are available.",
+    "gallery.kicker":"Gallery","gallery.title":"Nightclub, press and lifestyle visuals.",
+    "press.kicker":"Press kit","press.title":"Everything a promoter needs in one place.","press.body":"Bio, photos, links, booking contact and technical notes can be centralized here for clubs, festivals and private event organizers.","press.open":"Open Press Kit",
+    "booking.kicker":"Booking","booking.title":"Bring Brazilian energy to your next event.","booking.body":"Send the event details. The form creates a ready-to-send WhatsApp booking request. It can later be connected to a real backend.","booking.fastContact":"Fast contact",
+    "form.name":"Name","form.email":"Email","form.phone":"Phone / WhatsApp","form.city":"City","form.date":"Event date","form.type":"Event type","form.budget":"Approx. budget","form.message":"Message","form.submit":"Send via WhatsApp",
+    "footer.tagline":"Brazilian Funk • Afro • Latin Vibes"
+  },
+  "fr": {
+    "nav.about":"Profil","nav.videos":"Vidéos","nav.shows":"Dates","nav.gallery":"Galerie","nav.booking":"Booking",
+    "hero.eyebrow":"Shows en Europe","hero.subtitle":"La chaleur brésilienne pour les dancefloors européens.",
+    "cta.book":"Réserver un show","cta.watch":"Voir en live","cta.press":"Press Kit",
+    "stats.languages":"Langues","stats.market":"Marché booking","stats.response":"Réponse rapide",
+    "about.kicker":"Profil artiste","about.title":"Une page de booking professionnelle, pas seulement un lien en bio.","about.body":"Jheff Brasil est positionné pour les événements Brazilian Funk, Afro et Latin en Europe. Ce site centralise l'image artiste, les vidéos, les dates, le press kit et le contact booking dans un espace professionnel.",
+    "live.kicker":"Énergie live","live.title":"Montrer l'ambiance avant la réservation.","live.subtitle":"Pour un DJ, les vidéos et l'atmosphère convertissent mieux qu'un long texte. Cette section est prévue pour les reels, sets YouTube et extraits live.",
+    "shows.kicker":"Prochaines dates","shows.title":"Dates, villes et liens d'événements.","shows.subtitle":"Remplace les événements démo dans data/events.json quand les vraies dates sont disponibles.",
+    "gallery.kicker":"Galerie","gallery.title":"Visuels nightclub, press et lifestyle.",
+    "press.kicker":"Press kit","press.title":"Tout ce qu'un organisateur doit voir au même endroit.","press.body":"Bio, photos, liens, contact booking et notes techniques peuvent être centralisés ici pour clubs, festivals et événements privés.","press.open":"Ouvrir le Press Kit",
+    "booking.kicker":"Booking","booking.title":"Amener l'énergie brésilienne à votre prochain événement.","booking.body":"Envoyez les détails de l'événement. Le formulaire crée une demande WhatsApp prête à envoyer. Il pourra ensuite être connecté à un vrai backend.","booking.fastContact":"Contact rapide",
+    "form.name":"Nom","form.email":"Email","form.phone":"Téléphone / WhatsApp","form.city":"Ville","form.date":"Date de l'événement","form.type":"Type d'événement","form.budget":"Budget approximatif","form.message":"Message","form.submit":"Envoyer via WhatsApp",
+    "footer.tagline":"Brazilian Funk • Afro • Latin Vibes"
+  },
+  "pt": {
+    "nav.about":"Perfil","nav.videos":"Vídeos","nav.shows":"Shows","nav.gallery":"Galeria","nav.booking":"Booking",
+    "hero.eyebrow":"Shows na Europa","hero.subtitle":"Calor brasileiro para as pistas europeias.",
+    "cta.book":"Reservar show","cta.watch":"Ver ao vivo","cta.press":"Press Kit",
+    "stats.languages":"Idiomas","stats.market":"Mercado booking","stats.response":"Resposta rápida",
+    "about.kicker":"Perfil do artista","about.title":"Uma página profissional de booking, não apenas um link na bio.","about.body":"Jheff Brasil está posicionado para eventos de Brazilian Funk, Afro e Latin na Europa. Este site centraliza imagem do artista, vídeos, datas, press kit e contato de booking em um único espaço profissional.",
+    "live.kicker":"Energia ao vivo","live.title":"Mostre a energia antes da contratação.","live.subtitle":"Para DJs, vídeo e atmosfera convertem melhor do que textos longos. Esta seção foi pensada para reels, sets no YouTube e clipes ao vivo.",
+    "shows.kicker":"Próximos shows","shows.title":"Datas, cidades e links dos eventos.","shows.subtitle":"Substitua os eventos demo em data/events.json quando houver datas reais.",
+    "gallery.kicker":"Galeria","gallery.title":"Visuais de club, press e lifestyle.",
+    "press.kicker":"Press kit","press.title":"Tudo que um produtor precisa em um só lugar.","press.body":"Bio, fotos, links, contato de booking e notas técnicas podem ficar centralizados aqui para clubs, festivais e eventos privados.","press.open":"Abrir Press Kit",
+    "booking.kicker":"Booking","booking.title":"Leve energia brasileira para seu próximo evento.","booking.body":"Envie os detalhes do evento. O formulário cria uma mensagem pronta no WhatsApp. Depois pode ser conectado a um backend real.","booking.fastContact":"Contato rápido",
+    "form.name":"Nome","form.email":"Email","form.phone":"Telefone / WhatsApp","form.city":"Cidade","form.date":"Data do evento","form.type":"Tipo de evento","form.budget":"Budget aproximado","form.message":"Mensagem","form.submit":"Enviar pelo WhatsApp",
+    "footer.tagline":"Brazilian Funk • Afro • Latin Vibes"
+  }
+}
