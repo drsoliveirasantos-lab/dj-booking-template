@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=manga-rosa-3">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=manga-rosa-4">
   <style>
     body.availability-page{overflow:auto;background:#100a12;color:var(--text)}
     .availability-page:before{content:"";position:fixed;inset:0;z-index:-4;background:linear-gradient(120deg,rgba(12,7,14,.96),rgba(20,11,18,.78)),url('/assets/images/live-performance.webp') center/cover;filter:saturate(.78) brightness(.58)}
@@ -21,7 +21,7 @@
     .status-card{border-radius:28px;background:linear-gradient(160deg,rgba(240,108,171,.08),rgba(184,217,94,.055));padding:22px;align-self:stretch;display:grid;align-content:center;gap:14px}.status-line{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;color:var(--muted);font-weight:800;line-height:1.45}.status-dot{width:13px;height:13px;border-radius:50%;margin-top:5px;background:linear-gradient(135deg,var(--pink),var(--lime));box-shadow:0 0 20px rgba(240,108,171,.4)}
     .availability-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:18px;align-items:start}.calendar-card,.request-card,.dates-card{border-radius:30px;overflow:hidden}.card-head{padding:20px 20px 0}.card-head h2,.request-card h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);line-height:.92;letter-spacing:-.065em;margin:0 0 8px}.card-head p,.request-card p{margin:0;color:var(--muted);line-height:1.48}
     .calendar-live{margin:18px;border-radius:24px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(135deg,rgba(16,10,18,.96),rgba(30,14,25,.92));padding:22px;display:grid;gap:16px}.live-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}.live-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950}.live-row h3{font-family:var(--display);font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-.075em;margin:0 0 6px}.live-row p{margin:0;color:var(--muted);line-height:1.5}.live-meta{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid rgba(248,163,197,.22);border-radius:999px;padding:8px 11px;color:#f8f1eb;background:rgba(255,255,255,.055);font-weight:900;font-size:.78rem}.pill.good{border-color:rgba(184,217,94,.32);background:rgba(184,217,94,.08)}.pill.bad{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}
-    .dates-card{padding-bottom:14px}.date-list{display:grid;gap:12px;padding:18px}.date-item{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:13px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}.date-day{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950;line-height:1}.date-day small{display:block;font-size:.7rem;text-transform:uppercase}.date-info b{display:block}.date-info span{display:block;color:var(--muted);font-size:.92rem;margin-top:3px}.tag{display:inline-flex;border:1px solid rgba(184,217,94,.32);border-radius:999px;padding:7px 10px;color:#f8f1eb;font-weight:900;font-size:.75rem;background:rgba(184,217,94,.08)}.tag.private{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}button.tag{cursor:pointer}.request-card{padding:22px}.availability-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.availability-form label{display:grid;gap:7px;color:var(--muted);font-size:.9rem;font-weight:850}.availability-form input,.availability-form select,.availability-form textarea{width:100%;border:1px solid rgba(248,163,197,.18);border-radius:16px;background:#0d0910;color:var(--text);padding:13px 14px}.availability-form .full{grid-column:1/-1}.tiny-note{margin-top:12px!important;font-size:.86rem;color:var(--muted)}.setup-note{border:1px dashed rgba(248,163,197,.24);border-radius:22px;padding:16px;margin:0 18px 18px;color:var(--muted);background:rgba(0,0,0,.22)}.setup-note summary{cursor:pointer;color:#ffd7e8;font-weight:950}.setup-note ul{margin:12px 0 0;padding-left:20px}.setup-note code{color:#fff;background:rgba(255,255,255,.06);padding:2px 5px;border-radius:6px}
+    .dates-card{padding-bottom:14px}.date-list{display:grid;gap:12px;padding:18px}.date-item{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:13px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}.date-day{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950;line-height:1}.date-day small{display:block;font-size:.7rem;text-transform:uppercase}.date-info b{display:block}.date-info span{display:block;color:var(--muted);font-size:.92rem;margin-top:3px}.tag{display:inline-flex;border:1px solid rgba(184,217,94,.32);border-radius:999px;padding:7px 10px;color:#f8f1eb;font-weight:900;font-size:.75rem;background:rgba(184,217,94,.08)}.tag.private{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}button.tag{cursor:pointer}.request-card{padding:22px}.availability-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.availability-form label{display:grid;gap:7px;color:var(--muted);font-size:.9rem;font-weight:850}.availability-form input,.availability-form select,.availability-form textarea{width:100%;border:1px solid rgba(248,163,197,.18);border-radius:16px;background:#0d0910;color:var(--text);padding:13px 14px}.availability-form .full{grid-column:1/-1}.tiny-note{margin-top:12px!important;font-size:.86rem;color:var(--muted)}.setup-note{display:none}
     @media(max-width:900px){.availability-page .topbar{position:relative;top:0;left:auto;transform:none;width:calc(100% - 22px);margin:10px auto 0}.availability-main{padding-top:22px;width:calc(100% - 22px)}.availability-hero,.availability-grid{grid-template-columns:1fr}.availability-title{padding:20px;border-radius:28px}.availability-logo{width:min(220px,62vw)}.date-item{grid-template-columns:auto 1fr}.date-item .tag{grid-column:2}.availability-form{grid-template-columns:1fr}.request-card{padding:18px}.calendar-live{margin:12px;padding:18px}.live-row{grid-template-columns:1fr}.live-icon{width:48px;height:48px}}
   </style>
 </head>
@@ -33,15 +33,15 @@
 
   <main class="availability-main">
     <section class="availability-hero">
-      <div class="availability-title"><img class="availability-logo" src="/assets/images/jheff-brasil-logo.svg" alt="Jheff Brasil logo"><p class="eyebrow">Availability · Public calendar</p><h1>Agenda & Booking</h1><p class="lead">Check public dates, see availability direction and send a clean booking request for clubs, private events, festivals and cultural productions.</p></div>
-      <aside class="status-card"><div class="status-line"><span class="status-dot"></span><span><strong>Calendar feed connected.</strong><br>This page reads the public iCloud/WebCal feed through a Cloudflare function.</span></div><div class="status-line"><span class="status-dot"></span><span><strong>Request, not automatic booking.</strong><br>The visitor sends a date request. Confirmation is still manual by WhatsApp.</span></div></aside>
+      <div class="availability-title"><img class="availability-logo" src="/assets/images/jheff-brasil-logo.svg" alt="Jheff Brasil logo"><p class="eyebrow">Availability · Google Calendar</p><h1>Agenda & Booking</h1><p class="lead">Check public dates, see availability direction and send a clean booking request for clubs, private events, festivals and cultural productions.</p></div>
+      <aside class="status-card"><div class="status-line"><span class="status-dot"></span><span><strong>Google Calendar connected.</strong><br>This page reads the public Google Calendar feed through a Cloudflare function.</span></div><div class="status-line"><span class="status-dot"></span><span><strong>Request, not automatic booking.</strong><br>The visitor sends a date request. Confirmation is still manual by WhatsApp.</span></div></aside>
     </section>
 
     <section class="availability-grid">
       <div class="calendar-card">
-        <div class="card-head"><p class="kicker">Calendar source</p><h2>Live Public Dates</h2><p>The design stays custom. The event data comes from the public calendar feed, so new dates can be added from a phone.</p></div>
-        <div class="calendar-live"><div class="live-row"><div class="live-icon">CAL</div><div><h3 id="calendar-status-title">Loading calendar…</h3><p id="calendar-status-text">We are checking the connected WebCal/iCloud feed and preparing the public dates.</p></div></div><div class="live-meta"><span class="pill" id="calendar-source-pill">Source: iCloud/WebCal</span><span class="pill" id="calendar-updated-pill">Waiting for feed</span><span class="pill good">Mango Rosa theme</span></div></div>
-        <details class="setup-note"><summary>Technical note</summary><ul><li>This draft uses the public WebCal/iCloud URL you sent.</li><li>On Cloudflare, <code>/api/calendar</code> fetches the calendar and converts events to JSON.</li><li>Later, if Jheff uses Google Calendar, we can swap the source without changing the design.</li></ul></details>
+        <div class="card-head"><p class="kicker">Calendar source</p><h2>Live Public Dates</h2><p>The design stays custom. The event data comes from the public Google Calendar feed, so new dates can be added from a phone.</p></div>
+        <div class="calendar-live"><div class="live-row"><div class="live-icon">CAL</div><div><h3 id="calendar-status-title">Loading calendar…</h3><p id="calendar-status-text">We are checking the connected Google Calendar feed and preparing the public dates.</p></div></div><div class="live-meta"><span class="pill" id="calendar-source-pill">Source: loading…</span><span class="pill" id="calendar-updated-pill">Waiting for feed</span><span class="pill good">Mango Rosa theme</span></div></div>
+        <details class="setup-note"><summary>Technical note</summary><ul><li>This draft uses the public Google Calendar iCal URL.</li><li>On Cloudflare, <code>/api/calendar</code> fetches the calendar and converts events to JSON.</li></ul></details>
       </div>
 
       <aside class="request-card"><p class="kicker">Request a date</p><h2>Check Availability</h2><p>Pick a desired date and send the booking details directly by WhatsApp. The date is not confirmed until Jheff / production replies.</p><form class="availability-form" id="availability-form"><label><span>Date</span><input name="date" type="date" required></label><label><span>City</span><input name="city" placeholder="Paris, Lisbon, Bordeaux…" required></label><label><span>Event type</span><select name="type"><option>Club night</option><option>Private party</option><option>Festival</option><option>Cultural event</option><option>Corporate event</option><option>Other</option></select></label><label><span>Approx. guests</span><input name="guests" inputmode="numeric" placeholder="Optional"></label><label class="full"><span>Approx. budget</span><input name="budget" placeholder="Optional"></label><label class="full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about the event, venue, audience and music vibe."></textarea></label><button class="btn primary full" type="submit">Send request on WhatsApp <span class="btn-arrow">→</span></button></form><p class="tiny-note">WhatsApp: +351 919 344 194 · Instagram: @jheffbrasil</p></aside>
@@ -59,6 +59,7 @@
     function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char])); }
     function dateInputValue(iso) { return new Date(iso).toISOString().slice(0,10); }
     function renderDay(iso) { const d = new Date(iso); return `<div class="date-day"><span>${String(d.getDate()).padStart(2,'0')}</span><small>${monthFmt.format(d)}</small></div>`; }
+    function sourceLabel(source, demo) { if (demo) return 'Source: demo fallback'; if (source === 'google-calendar-ical') return 'Source: Google Calendar'; if (source === 'icloud-webcal') return 'Source: iCloud/WebCal'; return `Source: ${source || 'calendar feed'}`; }
 
     async function loadCalendar() {
       const list = document.getElementById('date-list');
@@ -66,6 +67,7 @@
       const title = document.getElementById('calendar-status-title');
       const text = document.getElementById('calendar-status-text');
       const updated = document.getElementById('calendar-updated-pill');
+      const sourcePill = document.getElementById('calendar-source-pill');
 
       try {
         const response = await fetch('/api/calendar', { headers: { accept: 'application/json' } });
@@ -73,10 +75,12 @@
         if (!response.ok || !data.ok) throw new Error(data.error || 'Calendar unavailable');
 
         const events = data.events || [];
+        sourcePill.textContent = sourceLabel(data.source, data.demo);
+        sourcePill.classList.toggle('bad', Boolean(data.demo));
         updated.textContent = `Updated: ${new Date(data.updatedAt).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
-        title.textContent = events.length ? 'Calendar connected' : 'Calendar connected, no upcoming public dates';
-        text.textContent = events.length ? `${events.length} upcoming public date(s) loaded from the connected feed.` : 'The feed is active, but there are no upcoming events to display yet.';
-        subtitle.textContent = events.length ? 'These dates are loaded from the connected calendar feed.' : 'No upcoming public dates found yet. Add events to the calendar and redeploy/reload.';
+        title.textContent = data.demo ? 'Demo mode active' : (events.length ? 'Google Calendar connected' : 'Google Calendar connected, no upcoming public dates');
+        text.textContent = data.demo ? `Demo events are shown because the real calendar feed is not public yet or has no upcoming dates. Reason: ${data.reason || 'waiting for calendar'}.` : (events.length ? `${events.length} upcoming public date(s) loaded from Google Calendar.` : 'The Google feed is active, but there are no upcoming events to display yet.');
+        subtitle.textContent = data.demo ? 'Demo dates are shown until the Google Calendar public feed returns real events.' : (events.length ? 'These dates are loaded from the connected Google Calendar feed.' : 'No upcoming public dates found yet. Add events to the calendar and refresh this page.');
 
         if (!events.length) {
           list.innerHTML = `<article class="date-item"><div class="date-day"><span>0</span><small>Dates</small></div><div class="date-info"><b>No upcoming public dates</b><span>Add test events to the connected calendar and refresh this page.</span></div><span class="tag private">Empty</span></article>`;
@@ -94,10 +98,12 @@
         bindPrefillButtons();
       } catch (error) {
         title.textContent = 'Calendar feed error';
-        text.textContent = 'The site could not read the connected WebCal feed yet. The request form still works.';
+        text.textContent = 'The site could not read the connected calendar feed yet. The request form still works.';
+        sourcePill.textContent = 'Source: feed error';
+        sourcePill.classList.add('bad');
         updated.textContent = 'Feed error';
         updated.classList.add('bad');
-        subtitle.textContent = 'Calendar events could not be loaded. The fallback examples are shown below.';
+        subtitle.textContent = 'Calendar events could not be loaded.';
         list.innerHTML = `<article class="date-item"><div class="date-day"><span>!</span><small>Feed</small></div><div class="date-info"><b>Calendar unavailable</b><span>${escapeHtml(error.message)}</span></div><span class="tag private">Error</span></article>`;
       }
     }
