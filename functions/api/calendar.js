@@ -1,13 +1,10 @@
 const CALENDAR_URL = 'https://calendar.google.com/calendar/ical/a2466803390cfb66d8dbe85b18656bda737cee1a1b67e27a9cd43697d12df415%40group.calendar.google.com/public/basic.ics';
-const ENABLE_DEMO_FALLBACK = true;
+const ENABLE_DEMO_FALLBACK = false;
 
 export async function onRequestGet() {
   try {
     const response = await fetch(CALENDAR_URL, { headers: { 'user-agent': 'Jheff-X-Dj-Availability/1.0' } });
-    if (!response.ok) {
-      if (ENABLE_DEMO_FALLBACK) return demoResponse(`Calendar feed returned ${response.status}`);
-      return json({ ok: false, error: `Calendar feed returned ${response.status}` }, 502);
-    }
+    if (!response.ok) return json({ ok: false, error: `Calendar feed returned ${response.status}` }, 502);
 
     const ics = await response.text();
     const events = parseIcsEvents(ics)
@@ -17,38 +14,10 @@ export async function onRequestGet() {
       .slice(0, 16)
       .map(toPublicEvent);
 
-    if (!events.length && ENABLE_DEMO_FALLBACK) return demoResponse('Connected Google calendar has no upcoming public events yet');
-
     return json({ ok: true, source: 'google-calendar-ical', demo: false, updatedAt: new Date().toISOString(), events }, 200, { 'cache-control': 'public, max-age=120' });
   } catch (error) {
-    if (ENABLE_DEMO_FALLBACK) return demoResponse(error?.message || 'Calendar feed error');
     return json({ ok: false, error: error?.message || 'Calendar feed error' }, 500);
   }
-}
-
-function demoResponse(reason) {
-  return json({ ok: true, source: 'demo-fallback', demo: true, reason, updatedAt: new Date().toISOString(), events: buildDemoEvents() }, 200, { 'cache-control': 'public, max-age=60' });
-}
-
-function buildDemoEvents() {
-  const now = new Date();
-  const base = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 3, 20, 0, 0));
-  const addDays = (days, startHour, durationHours, title, location, description, status = 'Confirmed') => {
-    const start = new Date(base);
-    start.setUTCDate(base.getUTCDate() + days);
-    start.setUTCHours(startHour, 0, 0, 0);
-    const end = new Date(start);
-    end.setUTCHours(end.getUTCHours() + durationHours);
-    return { title, location, description, url: '', start: start.toISOString(), end: end.toISOString(), allDay: false, status, requestable: !/private|unavailable/i.test(status) };
-  };
-  return [
-    addDays(2, 22, 4, 'DJ Nikuto Test — Club Night Paris', 'Paris, France', 'Demo public event for calendar rendering.'),
-    addDays(5, 19, 3, 'DJ Nikuto Test — Brazilian Party Bordeaux', 'Bordeaux, France', 'Demo public event for calendar rendering.'),
-    addDays(8, 21, 4, 'DJ Nikuto Test — Private Event', 'Location hidden', 'Demo private event. Public page shows it as private.', 'Private / Unavailable'),
-    addDays(11, 18, 3, 'DJ Nikuto Test — Festival Lisbon', 'Lisbon, Portugal', 'Demo public event for calendar rendering.'),
-    addDays(15, 20, 4, 'DJ Nikuto Test — Latin Club Marseille', 'Marseille, France', 'Demo public event for calendar rendering.'),
-    addDays(18, 12, 8, 'Travel / Unavailable', 'Europe', 'Demo unavailable day.', 'Private / Unavailable')
-  ];
 }
 
 function json(payload, status = 200, extraHeaders = {}) {
