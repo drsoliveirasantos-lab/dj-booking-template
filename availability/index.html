@@ -10,26 +10,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=manga-rosa-2">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=manga-rosa-3">
   <style>
     body.availability-page{overflow:auto;background:#100a12;color:var(--text)}
     .availability-page:before{content:"";position:fixed;inset:0;z-index:-4;background:linear-gradient(120deg,rgba(12,7,14,.96),rgba(20,11,18,.78)),url('/assets/images/live-performance.webp') center/cover;filter:saturate(.78) brightness(.58)}
     .availability-page:after{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 18% 20%,rgba(240,108,171,.20),transparent 22rem),radial-gradient(circle at 78% 16%,rgba(184,217,94,.12),transparent 20rem),radial-gradient(circle at 78% 88%,rgba(111,58,120,.28),transparent 28rem);pointer-events:none}
-    .availability-main{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:96px 0 46px;display:grid;gap:22px}
-    .availability-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:end}
-    .availability-title{border:1px solid rgba(248,163,197,.18);border-radius:34px;padding:26px;background:linear-gradient(140deg,rgba(16,10,18,.74),rgba(21,12,21,.42));backdrop-filter:blur(12px);box-shadow:0 26px 90px rgba(0,0,0,.38)}
-    .availability-title h1{font-family:var(--display);font-size:clamp(3.1rem,8vw,7.2rem);line-height:.88;letter-spacing:-.08em;margin:0 0 12px}
-    .availability-title .lead{max-width:760px}
-    .availability-logo{width:min(260px,54vw);display:block;margin-bottom:12px;filter:drop-shadow(0 12px 26px rgba(0,0,0,.42))}
-    .status-card{border:1px solid rgba(248,163,197,.18);border-radius:28px;background:linear-gradient(160deg,rgba(240,108,171,.08),rgba(184,217,94,.055));padding:22px;align-self:stretch;display:grid;align-content:center;gap:14px}
-    .status-line{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;color:var(--muted);font-weight:800;line-height:1.45}
-    .status-dot{width:13px;height:13px;border-radius:50%;margin-top:5px;background:linear-gradient(135deg,var(--pink),var(--lime));box-shadow:0 0 20px rgba(240,108,171,.4)}
-    .availability-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:18px;align-items:start}
-    .calendar-card,.request-card,.dates-card{border:1px solid rgba(248,163,197,.18);border-radius:30px;background:rgba(12,8,14,.78);backdrop-filter:blur(12px);box-shadow:0 26px 90px rgba(0,0,0,.32);overflow:hidden}
-    .card-head{padding:20px 20px 0}.card-head h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);line-height:.92;letter-spacing:-.065em;margin:0 0 8px}.card-head p{margin:0;color:var(--muted);line-height:1.48}.calendar-shell{position:relative;margin:18px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.10);background:#0d0910;min-height:520px}.calendar-shell iframe{width:100%;height:520px;border:0;display:block;filter:saturate(.9) contrast(1.02)}
-    .calendar-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;background:linear-gradient(135deg,rgba(16,10,18,.96),rgba(30,14,25,.92));z-index:2}.calendar-placeholder-inner{max-width:520px}.calendar-placeholder h3{font-family:var(--display);font-size:clamp(2rem,5vw,4rem);letter-spacing:-.08em;margin:0 0 10px}.calendar-placeholder p{color:var(--muted);line-height:1.5}.calendar-placeholder code{display:inline-flex;padding:5px 8px;border:1px solid rgba(248,163,197,.22);border-radius:8px;color:#ffd7e8;background:rgba(0,0,0,.28)}
-    .dates-card{padding-bottom:14px}.date-list{display:grid;gap:12px;padding:18px}.date-item{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:13px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}.date-day{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950;line-height:1}.date-day small{display:block;font-size:.7rem;text-transform:uppercase}.date-info b{display:block}.date-info span{display:block;color:var(--muted);font-size:.92rem;margin-top:3px}.tag{display:inline-flex;border:1px solid rgba(184,217,94,.32);border-radius:999px;padding:7px 10px;color:#f8f1eb;font-weight:900;font-size:.75rem;background:rgba(184,217,94,.08)}.tag.private{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}.request-card{padding:22px}.request-card h2{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);line-height:.92;letter-spacing:-.065em;margin:0 0 8px}.request-card p{color:var(--muted);line-height:1.48}.availability-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.availability-form label{display:grid;gap:7px;color:var(--muted);font-size:.9rem;font-weight:850}.availability-form input,.availability-form select,.availability-form textarea{width:100%;border:1px solid rgba(248,163,197,.18);border-radius:16px;background:#0d0910;color:var(--text);padding:13px 14px}.availability-form .full{grid-column:1/-1}.setup-note{border:1px dashed rgba(248,163,197,.24);border-radius:22px;padding:16px;margin:0 18px 18px;color:var(--muted);background:rgba(0,0,0,.22)}.setup-note summary{cursor:pointer;color:#ffd7e8;font-weight:950}.setup-note ol{margin:12px 0 0;padding-left:20px}.setup-note code{color:#fff;background:rgba(255,255,255,.06);padding:2px 5px;border-radius:6px}.tiny-note{margin-top:12px;font-size:.86rem;color:var(--muted)}
-    @media(max-width:900px){.availability-page .topbar{position:relative;top:0;left:auto;transform:none;width:calc(100% - 22px);margin:10px auto 0}.availability-main{padding-top:22px;width:calc(100% - 22px)}.availability-hero,.availability-grid{grid-template-columns:1fr}.availability-title{padding:20px;border-radius:28px}.availability-logo{width:min(220px,62vw)}.calendar-shell{min-height:420px;margin:12px}.calendar-shell iframe{height:420px}.date-item{grid-template-columns:auto 1fr}.date-item .tag{grid-column:2}.availability-form{grid-template-columns:1fr}.request-card{padding:18px}}
+    .availability-main{width:min(1180px,calc(100% - 28px));margin:0 auto;padding:96px 0 46px;display:grid;gap:22px}.availability-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;align-items:end}
+    .availability-title,.status-card,.calendar-card,.request-card,.dates-card{border:1px solid rgba(248,163,197,.18);background:rgba(12,8,14,.78);backdrop-filter:blur(12px);box-shadow:0 26px 90px rgba(0,0,0,.32)}
+    .availability-title{border-radius:34px;padding:26px;background:linear-gradient(140deg,rgba(16,10,18,.74),rgba(21,12,21,.42))}.availability-title h1{font-family:var(--display);font-size:clamp(3.1rem,8vw,7.2rem);line-height:.88;letter-spacing:-.08em;margin:0 0 12px}.availability-title .lead{max-width:760px}.availability-logo{width:min(260px,54vw);display:block;margin-bottom:12px;filter:drop-shadow(0 12px 26px rgba(0,0,0,.42))}
+    .status-card{border-radius:28px;background:linear-gradient(160deg,rgba(240,108,171,.08),rgba(184,217,94,.055));padding:22px;align-self:stretch;display:grid;align-content:center;gap:14px}.status-line{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;color:var(--muted);font-weight:800;line-height:1.45}.status-dot{width:13px;height:13px;border-radius:50%;margin-top:5px;background:linear-gradient(135deg,var(--pink),var(--lime));box-shadow:0 0 20px rgba(240,108,171,.4)}
+    .availability-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:18px;align-items:start}.calendar-card,.request-card,.dates-card{border-radius:30px;overflow:hidden}.card-head{padding:20px 20px 0}.card-head h2,.request-card h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);line-height:.92;letter-spacing:-.065em;margin:0 0 8px}.card-head p,.request-card p{margin:0;color:var(--muted);line-height:1.48}
+    .calendar-live{margin:18px;border-radius:24px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(135deg,rgba(16,10,18,.96),rgba(30,14,25,.92));padding:22px;display:grid;gap:16px}.live-row{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}.live-icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950}.live-row h3{font-family:var(--display);font-size:clamp(1.8rem,4vw,3.2rem);letter-spacing:-.075em;margin:0 0 6px}.live-row p{margin:0;color:var(--muted);line-height:1.5}.live-meta{display:flex;flex-wrap:wrap;gap:8px}.pill{border:1px solid rgba(248,163,197,.22);border-radius:999px;padding:8px 11px;color:#f8f1eb;background:rgba(255,255,255,.055);font-weight:900;font-size:.78rem}.pill.good{border-color:rgba(184,217,94,.32);background:rgba(184,217,94,.08)}.pill.bad{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}
+    .dates-card{padding-bottom:14px}.date-list{display:grid;gap:12px;padding:18px}.date-item{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:center;border:1px solid rgba(255,255,255,.10);border-radius:20px;padding:13px;background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.025))}.date-day{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,var(--pink),var(--coral),var(--lime));color:#150d16;font-weight:950;line-height:1}.date-day small{display:block;font-size:.7rem;text-transform:uppercase}.date-info b{display:block}.date-info span{display:block;color:var(--muted);font-size:.92rem;margin-top:3px}.tag{display:inline-flex;border:1px solid rgba(184,217,94,.32);border-radius:999px;padding:7px 10px;color:#f8f1eb;font-weight:900;font-size:.75rem;background:rgba(184,217,94,.08)}.tag.private{border-color:rgba(240,108,171,.32);background:rgba(240,108,171,.08)}button.tag{cursor:pointer}.request-card{padding:22px}.availability-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.availability-form label{display:grid;gap:7px;color:var(--muted);font-size:.9rem;font-weight:850}.availability-form input,.availability-form select,.availability-form textarea{width:100%;border:1px solid rgba(248,163,197,.18);border-radius:16px;background:#0d0910;color:var(--text);padding:13px 14px}.availability-form .full{grid-column:1/-1}.tiny-note{margin-top:12px!important;font-size:.86rem;color:var(--muted)}.setup-note{border:1px dashed rgba(248,163,197,.24);border-radius:22px;padding:16px;margin:0 18px 18px;color:var(--muted);background:rgba(0,0,0,.22)}.setup-note summary{cursor:pointer;color:#ffd7e8;font-weight:950}.setup-note ul{margin:12px 0 0;padding-left:20px}.setup-note code{color:#fff;background:rgba(255,255,255,.06);padding:2px 5px;border-radius:6px}
+    @media(max-width:900px){.availability-page .topbar{position:relative;top:0;left:auto;transform:none;width:calc(100% - 22px);margin:10px auto 0}.availability-main{padding-top:22px;width:calc(100% - 22px)}.availability-hero,.availability-grid{grid-template-columns:1fr}.availability-title{padding:20px;border-radius:28px}.availability-logo{width:min(220px,62vw)}.date-item{grid-template-columns:auto 1fr}.date-item .tag{grid-column:2}.availability-form{grid-template-columns:1fr}.request-card{padding:18px}.calendar-live{margin:12px;padding:18px}.live-row{grid-template-columns:1fr}.live-icon{width:48px;height:48px}}
   </style>
 </head>
 <body class="page manga-theme availability-page">
@@ -40,116 +33,93 @@
 
   <main class="availability-main">
     <section class="availability-hero">
-      <div class="availability-title">
-        <img class="availability-logo" src="/assets/images/jheff-brasil-logo.svg" alt="Jheff Brasil logo">
-        <p class="eyebrow">Availability · Public calendar</p>
-        <h1>Agenda & Booking</h1>
-        <p class="lead">Check public dates, see availability direction and send a clean booking request for clubs, private events, festivals and cultural productions.</p>
-      </div>
-      <aside class="status-card">
-        <div class="status-line"><span class="status-dot"></span><span><strong>Public calendar only.</strong><br>Confirmed public dates can appear here. Private events and personal appointments stay hidden.</span></div>
-        <div class="status-line"><span class="status-dot"></span><span><strong>Request, not automatic booking.</strong><br>The visitor sends a date request. Confirmation is still manual by WhatsApp.</span></div>
-      </aside>
+      <div class="availability-title"><img class="availability-logo" src="/assets/images/jheff-brasil-logo.svg" alt="Jheff Brasil logo"><p class="eyebrow">Availability · Public calendar</p><h1>Agenda & Booking</h1><p class="lead">Check public dates, see availability direction and send a clean booking request for clubs, private events, festivals and cultural productions.</p></div>
+      <aside class="status-card"><div class="status-line"><span class="status-dot"></span><span><strong>Calendar feed connected.</strong><br>This page reads the public iCloud/WebCal feed through a Cloudflare function.</span></div><div class="status-line"><span class="status-dot"></span><span><strong>Request, not automatic booking.</strong><br>The visitor sends a date request. Confirmation is still manual by WhatsApp.</span></div></aside>
     </section>
 
     <section class="availability-grid">
       <div class="calendar-card">
-        <div class="card-head">
-          <p class="kicker">Calendar view</p>
-          <h2>Public Dates</h2>
-          <p>This area is ready for a Google Calendar embed. For the draft, it shows a clean placeholder until we paste your calendar embed link.</p>
-        </div>
-        <div class="calendar-shell">
-          <iframe id="google-calendar-frame" title="Jheff X Dj public calendar" loading="lazy" hidden></iframe>
-          <div class="calendar-placeholder" id="calendar-placeholder">
-            <div class="calendar-placeholder-inner">
-              <h3>Calendar not connected yet</h3>
-              <p>Create a separate Google Calendar for public shows, copy the embed URL, then we paste it into this page. The design around it stays premium.</p>
-              <p><code>GOOGLE_CALENDAR_EMBED_URL</code></p>
-            </div>
-          </div>
-        </div>
-        <details class="setup-note">
-          <summary>Setup note for Diego</summary>
-          <ol>
-            <li>Create a new Google Calendar only for public DJ dates.</li>
-            <li>Add a few test events from your phone.</li>
-            <li>Make only this calendar public/shareable, not your personal calendar.</li>
-            <li>Send me the Google Calendar embed URL. I will replace <code>GOOGLE_CALENDAR_EMBED_URL</code>.</li>
-          </ol>
-        </details>
+        <div class="card-head"><p class="kicker">Calendar source</p><h2>Live Public Dates</h2><p>The design stays custom. The event data comes from the public calendar feed, so new dates can be added from a phone.</p></div>
+        <div class="calendar-live"><div class="live-row"><div class="live-icon">CAL</div><div><h3 id="calendar-status-title">Loading calendar…</h3><p id="calendar-status-text">We are checking the connected WebCal/iCloud feed and preparing the public dates.</p></div></div><div class="live-meta"><span class="pill" id="calendar-source-pill">Source: iCloud/WebCal</span><span class="pill" id="calendar-updated-pill">Waiting for feed</span><span class="pill good">Mango Rosa theme</span></div></div>
+        <details class="setup-note"><summary>Technical note</summary><ul><li>This draft uses the public WebCal/iCloud URL you sent.</li><li>On Cloudflare, <code>/api/calendar</code> fetches the calendar and converts events to JSON.</li><li>Later, if Jheff uses Google Calendar, we can swap the source without changing the design.</li></ul></details>
       </div>
 
-      <aside class="request-card">
-        <p class="kicker">Request a date</p>
-        <h2>Check Availability</h2>
-        <p>Pick a desired date and send the booking details directly by WhatsApp. The date is not confirmed until Jheff / production replies.</p>
-        <form class="availability-form" id="availability-form">
-          <label><span>Date</span><input name="date" type="date" required></label>
-          <label><span>City</span><input name="city" placeholder="Paris, Lisbon, Bordeaux…" required></label>
-          <label><span>Event type</span><select name="type"><option>Club night</option><option>Private party</option><option>Festival</option><option>Cultural event</option><option>Corporate event</option><option>Other</option></select></label>
-          <label><span>Approx. guests</span><input name="guests" inputmode="numeric" placeholder="Optional"></label>
-          <label class="full"><span>Approx. budget</span><input name="budget" placeholder="Optional"></label>
-          <label class="full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about the event, venue, audience and music vibe."></textarea></label>
-          <button class="btn primary full" type="submit">Send request on WhatsApp <span class="btn-arrow">→</span></button>
-        </form>
-        <p class="tiny-note">WhatsApp: +351 919 344 194 · Instagram: @jheffbrasil</p>
-      </aside>
+      <aside class="request-card"><p class="kicker">Request a date</p><h2>Check Availability</h2><p>Pick a desired date and send the booking details directly by WhatsApp. The date is not confirmed until Jheff / production replies.</p><form class="availability-form" id="availability-form"><label><span>Date</span><input name="date" type="date" required></label><label><span>City</span><input name="city" placeholder="Paris, Lisbon, Bordeaux…" required></label><label><span>Event type</span><select name="type"><option>Club night</option><option>Private party</option><option>Festival</option><option>Cultural event</option><option>Corporate event</option><option>Other</option></select></label><label><span>Approx. guests</span><input name="guests" inputmode="numeric" placeholder="Optional"></label><label class="full"><span>Approx. budget</span><input name="budget" placeholder="Optional"></label><label class="full"><span>Message</span><textarea name="message" rows="4" placeholder="Tell us about the event, venue, audience and music vibe."></textarea></label><button class="btn primary full" type="submit">Send request on WhatsApp <span class="btn-arrow">→</span></button></form><p class="tiny-note">WhatsApp: +351 919 344 194 · Instagram: @jheffbrasil</p></aside>
     </section>
 
-    <section class="dates-card">
-      <div class="card-head">
-        <p class="kicker">Draft display</p>
-        <h2>Upcoming Dates</h2>
-        <p>These are demo cards. Later, this can either stay manual or be replaced by the Google Calendar feed.</p>
-      </div>
-      <div class="date-list">
-        <article class="date-item"><div class="date-day"><span>14</span><small>Jul</small></div><div class="date-info"><b>Bordeaux · Brazilian Night</b><span>Public event · Example only</span></div><span class="tag">Confirmed</span></article>
-        <article class="date-item"><div class="date-day"><span>20</span><small>Jul</small></div><div class="date-info"><b>Private Event</b><span>City hidden · Example only</span></div><span class="tag private">Private</span></article>
-        <article class="date-item"><div class="date-day"><span>03</span><small>Aug</small></div><div class="date-info"><b>Available on request</b><span>Send city, venue type and estimated audience</span></div><button class="tag" type="button" data-prefill-date="2026-08-03">Request</button></article>
-      </div>
-    </section>
+    <section class="dates-card"><div class="card-head"><p class="kicker">Live feed</p><h2>Upcoming Dates</h2><p id="dates-subtitle">Loading events from the connected public calendar…</p></div><div class="date-list" id="date-list"><article class="date-item"><div class="date-day"><span>…</span><small>Live</small></div><div class="date-info"><b>Loading calendar feed</b><span>Please wait while the public dates are loaded.</span></div><span class="tag">Loading</span></article></div></section>
   </main>
 
   <script>
     const ARTIST_NAME = 'Jheff X Dj';
     const WHATSAPP_NUMBER = '351919344194';
-    const GOOGLE_CALENDAR_EMBED_URL = '';
+    const monthFmt = new Intl.DateTimeFormat('en', { month: 'short' });
+    const dateFmt = new Intl.DateTimeFormat('en-GB', { weekday:'short', day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' });
 
-    const frame = document.getElementById('google-calendar-frame');
-    const placeholder = document.getElementById('calendar-placeholder');
-    if (GOOGLE_CALENDAR_EMBED_URL) {
-      frame.src = GOOGLE_CALENDAR_EMBED_URL;
-      frame.hidden = false;
-      placeholder.hidden = true;
+    function escapeHtml(value = '') { return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char])); }
+    function dateInputValue(iso) { return new Date(iso).toISOString().slice(0,10); }
+    function renderDay(iso) { const d = new Date(iso); return `<div class="date-day"><span>${String(d.getDate()).padStart(2,'0')}</span><small>${monthFmt.format(d)}</small></div>`; }
+
+    async function loadCalendar() {
+      const list = document.getElementById('date-list');
+      const subtitle = document.getElementById('dates-subtitle');
+      const title = document.getElementById('calendar-status-title');
+      const text = document.getElementById('calendar-status-text');
+      const updated = document.getElementById('calendar-updated-pill');
+
+      try {
+        const response = await fetch('/api/calendar', { headers: { accept: 'application/json' } });
+        const data = await response.json();
+        if (!response.ok || !data.ok) throw new Error(data.error || 'Calendar unavailable');
+
+        const events = data.events || [];
+        updated.textContent = `Updated: ${new Date(data.updatedAt).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+        title.textContent = events.length ? 'Calendar connected' : 'Calendar connected, no upcoming public dates';
+        text.textContent = events.length ? `${events.length} upcoming public date(s) loaded from the connected feed.` : 'The feed is active, but there are no upcoming events to display yet.';
+        subtitle.textContent = events.length ? 'These dates are loaded from the connected calendar feed.' : 'No upcoming public dates found yet. Add events to the calendar and redeploy/reload.';
+
+        if (!events.length) {
+          list.innerHTML = `<article class="date-item"><div class="date-day"><span>0</span><small>Dates</small></div><div class="date-info"><b>No upcoming public dates</b><span>Add test events to the connected calendar and refresh this page.</span></div><span class="tag private">Empty</span></article>`;
+          return;
+        }
+
+        list.innerHTML = events.map(event => {
+          const date = new Date(event.start);
+          const isPrivate = /private|unavailable/i.test(event.status || '');
+          const location = event.location ? ` · ${escapeHtml(event.location)}` : '';
+          const detail = event.allDay ? `All day${location}` : `${dateFmt.format(date)}${location}`;
+          const button = isPrivate ? `<span class="tag private">${escapeHtml(event.status)}</span>` : `<button class="tag" type="button" data-prefill-date="${dateInputValue(event.start)}">Request</button>`;
+          return `<article class="date-item">${renderDay(event.start)}<div class="date-info"><b>${escapeHtml(event.title)}</b><span>${detail}</span></div>${button}</article>`;
+        }).join('');
+        bindPrefillButtons();
+      } catch (error) {
+        title.textContent = 'Calendar feed error';
+        text.textContent = 'The site could not read the connected WebCal feed yet. The request form still works.';
+        updated.textContent = 'Feed error';
+        updated.classList.add('bad');
+        subtitle.textContent = 'Calendar events could not be loaded. The fallback examples are shown below.';
+        list.innerHTML = `<article class="date-item"><div class="date-day"><span>!</span><small>Feed</small></div><div class="date-info"><b>Calendar unavailable</b><span>${escapeHtml(error.message)}</span></div><span class="tag private">Error</span></article>`;
+      }
     }
 
-    document.querySelectorAll('[data-prefill-date]').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelector('[name="date"]').value = button.dataset.prefillDate;
-        document.querySelector('[name="city"]').focus();
-        document.querySelector('.request-card').scrollIntoView({behavior:'smooth', block:'center'});
+    function bindPrefillButtons() {
+      document.querySelectorAll('[data-prefill-date]').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelector('[name="date"]').value = button.dataset.prefillDate;
+          document.querySelector('[name="city"]').focus();
+          document.querySelector('.request-card').scrollIntoView({behavior:'smooth', block:'center'});
+        });
       });
-    });
+    }
 
     document.getElementById('availability-form').addEventListener('submit', event => {
       event.preventDefault();
       const d = new FormData(event.currentTarget);
-      const message = [
-        `Hello ${ARTIST_NAME},`,
-        'I would like to check your availability for an event.',
-        '',
-        `Date: ${d.get('date') || '-'}`,
-        `City: ${d.get('city') || '-'}`,
-        `Event type: ${d.get('type') || '-'}`,
-        `Approx. guests: ${d.get('guests') || '-'}`,
-        `Approx. budget: ${d.get('budget') || '-'}`,
-        `Message: ${d.get('message') || '-'}`,
-        '',
-        'This is a booking request, not an automatic confirmation.'
-      ].join('\n');
+      const message = [`Hello ${ARTIST_NAME},`,'I would like to check your availability for an event.','',`Date: ${d.get('date') || '-'}`,`City: ${d.get('city') || '-'}`,`Event type: ${d.get('type') || '-'}`,`Approx. guests: ${d.get('guests') || '-'}`,`Approx. budget: ${d.get('budget') || '-'}`,`Message: ${d.get('message') || '-'}`,'','This is a booking request, not an automatic confirmation.'].join('\n');
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     });
+
+    loadCalendar();
   </script>
 </body>
 </html>
