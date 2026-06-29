@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="title desc">
+  <title id="title">Jheff Brasil logo</title>
+  <desc id="desc">Stylized Jheff Brasil wordmark inspired by the official logo.</desc>
+  <defs>
+    <linearGradient id="brasil" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#f1c21b"/>
+      <stop offset="0.45" stop-color="#f1c21b"/>
+      <stop offset="0.58" stop-color="#1db94d"/>
+      <stop offset="1" stop-color="#009b3a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="12" stdDeviation="9" flood-color="#000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)" transform="skewX(-13)">
+    <text x="58" y="102" fill="#fff" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="92" font-weight="900" letter-spacing="-5">JHEFF</text>
+    <text x="94" y="182" fill="url(#brasil)" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="86" font-weight="900" letter-spacing="-4">BRASIL</text>
+  </g>
+  <g opacity=".34" stroke="#0b0b0b" stroke-width="2">
+    <path d="M118 154l58 0M268 146l42 36M420 160l74 0M545 151l40 0"/>
+    <path d="M196 65l46 0M385 67l68 0"/>
+  </g>
+</svg>
