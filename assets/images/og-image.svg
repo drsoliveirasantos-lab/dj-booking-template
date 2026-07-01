@@ -1,22 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Jheff Brasil social preview">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#050505"/>
-      <stop offset="0.55" stop-color="#0b120c"/>
-      <stop offset="1" stop-color="#171207"/>
-    </linearGradient>
-    <radialGradient id="g1" cx="25%" cy="70%" r="60%"><stop stop-color="#39f26d" stop-opacity="0.26"/><stop offset="1" stop-color="#39f26d" stop-opacity="0"/></radialGradient>
-    <radialGradient id="g2" cx="82%" cy="20%" r="55%"><stop stop-color="#d8bd72" stop-opacity="0.24"/><stop offset="1" stop-color="#d8bd72" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07050a"/><stop offset="0.46" stop-color="#140914"/><stop offset="1" stop-color="#071207"/></linearGradient>
+    <radialGradient id="pink" cx="72%" cy="35%" r="54%"><stop stop-color="#f06cab" stop-opacity=".55"/><stop offset="1" stop-color="#f06cab" stop-opacity="0"/></radialGradient>
+    <radialGradient id="lime" cx="93%" cy="78%" r="45%"><stop stop-color="#b8d95e" stop-opacity=".42"/><stop offset="1" stop-color="#b8d95e" stop-opacity="0"/></radialGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffffff"/><stop offset=".62" stop-color="#fff1f6"/><stop offset="1" stop-color="#f06cab"/></linearGradient>
+    <linearGradient id="genre" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f4d21d"/><stop offset=".48" stop-color="#39e76a"/><stop offset="1" stop-color="#f06cab"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="16"/></filter>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#g1)"/>
-  <rect width="1200" height="630" fill="url(#g2)"/>
-  <circle cx="1040" cy="112" r="58" fill="#39f26d" opacity="0.9"/>
-  <text x="1040" y="132" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="#050505">JX</text>
-  <text x="80" y="128" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" letter-spacing="8" fill="#d8bd72">DJ BOOKING · EUROPE</text>
-  <text x="75" y="308" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="132" font-weight="900" letter-spacing="-8" fill="#f7f2e9">Jheff X Dj</text>
-  <text x="82" y="390" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" fill="#39f26d">Brazilian Funk • Afro • Latin Vibes</text>
-  <text x="82" y="465" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#afa79e">Bookings for clubs, private parties, festivals and events across Europe.</text>
-  <rect x="82" y="515" width="300" height="58" rx="29" fill="#f7f2e9"/>
-  <text x="232" y="554" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="900" fill="#050505">Check Availability</text>
+  <rect width="1200" height="630" fill="url(#pink)"/>
+  <rect width="1200" height="630" fill="url(#lime)"/>
+  <path d="M0 112 C245 26 462 38 714 0 L1200 0 L1200 630 L0 630 Z" fill="#08050a" opacity=".38"/>
+  <path d="M36 580 C200 486 373 495 523 565 C686 641 874 594 1168 505" stroke="#f06cab" stroke-width="2" opacity=".42" fill="none"/>
+  <path d="M716 0 L582 224 L31 596" stroke="#f06cab" stroke-width="1.5" opacity=".52" fill="none"/>
+  <path d="M804 83 C938 18 1112 57 1174 196 C1232 328 1122 485 961 481 C784 475 669 343 704 212 C720 152 754 108 804 83Z" fill="#f06cab" opacity=".17" filter="url(#soft)"/>
+  <g opacity=".24">
+    <circle cx="900" cy="420" r="132" fill="none" stroke="#f8a3c5" stroke-width="2"/>
+    <circle cx="900" cy="420" r="92" fill="none" stroke="#b8d95e" stroke-width="2"/>
+    <circle cx="900" cy="420" r="42" fill="none" stroke="#f06cab" stroke-width="2"/>
+    <circle cx="900" cy="420" r="13" fill="#f8a3c5"/>
+    <circle cx="1110" cy="475" r="108" fill="none" stroke="#b8d95e" stroke-width="2"/>
+    <circle cx="1110" cy="475" r="70" fill="none" stroke="#f06cab" stroke-width="2"/>
+    <circle cx="1110" cy="475" r="12" fill="#b8d95e"/>
+  </g>
+  <g opacity=".50">
+    <rect x="665" y="432" width="410" height="88" rx="18" fill="#0d0a11" stroke="#f8a3c5" stroke-opacity=".26"/>
+    <rect x="690" y="454" width="28" height="44" rx="6" fill="#f06cab" opacity=".82"/>
+    <rect x="735" y="444" width="12" height="62" rx="6" fill="#b8d95e"/>
+    <rect x="762" y="463" width="12" height="42" rx="6" fill="#f8a3c5"/>
+    <rect x="790" y="436" width="12" height="70" rx="6" fill="#e86b73"/>
+    <rect x="820" y="460" width="12" height="46" rx="6" fill="#b8d95e"/>
+    <rect x="852" y="446" width="12" height="60" rx="6" fill="#f8a3c5"/>
+  </g>
+  <g transform="translate(80 68)">
+    <text x="0" y="58" font-family="Impact, Arial Black, Arial, sans-serif" font-size="72" font-weight="900" letter-spacing="-3" fill="#fff" transform="skewX(-10)">JHEFF</text>
+    <text x="6" y="112" font-family="Impact, Arial Black, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2" fill="#f4d21d" transform="skewX(-10)">BRA</text>
+    <text x="129" y="112" font-family="Impact, Arial Black, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-2" fill="#39e76a" transform="skewX(-10)">SIL</text>
+    <path d="M-6 133 H318" stroke="#f06cab" stroke-width="2" opacity=".58"/>
+  </g>
+  <text x="78" y="312" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="120" font-weight="900" letter-spacing="-6" fill="url(#name)" filter="url(#glow)">Jheff Brasil</text>
+  <text x="83" y="389" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="900" fill="url(#genre)">Brazilian Funk • Afro • Latin Vibes</text>
+  <path d="M83 426 H250" stroke="url(#genre)" stroke-width="4" stroke-linecap="round"/>
+  <g transform="translate(83 482)">
+    <circle cx="23" cy="23" r="21" fill="none" stroke="#f06cab" stroke-width="4"/>
+    <path d="M5 23 H41 M23 2 C12 14 12 32 23 44 M23 2 C34 14 34 32 23 44" stroke="#f06cab" stroke-width="3" fill="none"/>
+    <text x="70" y="35" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#fff5f8">Bookings across Europe</text>
+  </g>
+  <g transform="translate(84 558)">
+    <circle cx="15" cy="15" r="14" fill="none" stroke="#f06cab" stroke-width="3"/>
+    <path d="M4 15 H26 M15 2 C8 10 8 20 15 28 M15 2 C22 10 22 20 15 28" stroke="#f06cab" stroke-width="2" fill="none"/>
+    <text x="48" y="24" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" letter-spacing="8" fill="#f06cab">dj.nykuto.com</text>
+  </g>
+  <g opacity=".68">
+    <circle cx="1015" cy="128" r="78" fill="#100a12" stroke="#f06cab" stroke-opacity=".34" stroke-width="2"/>
+    <path d="M974 166 C995 114 1024 78 1060 86 C1098 95 1100 153 1067 181 C1043 202 997 197 974 166Z" fill="#f8e7dc" opacity=".72"/>
+    <circle cx="1022" cy="111" r="36" fill="#6b3b2a"/>
+    <path d="M989 110 C1000 75 1044 71 1061 98 C1040 86 1012 90 989 110Z" fill="#080506"/>
+    <rect x="1000" y="105" width="54" height="17" rx="8" fill="#050505" opacity=".92"/>
+    <path d="M1007 202 C1034 220 1074 220 1102 198" stroke="#b8d95e" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+  </g>
 </svg>
