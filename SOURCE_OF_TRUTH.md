@@ -37,3 +37,11 @@ The GitHub workflow is:
 ## Forbidden stale material
 
 Do not keep temporary archives, backup copies, debug workflows, or old generated dumps in the repository unless explicitly documented and validated.
+
+## Shared typography standard
+
+[Typography hierarchy](docs/typography-standard.md) is the required visual
+instruction for new and updated interfaces, including sites created from this
+repository. It defines role-based sizes, readable learning content and the
+instruction handoff to future repositories. Adding the instruction does not
+itself change the existing runtime styles.
